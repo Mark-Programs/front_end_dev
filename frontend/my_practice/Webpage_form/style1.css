@@ -1,0 +1,56 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+img.site {
+    max-width: auto;
+    height: 30px;
+    display: inline;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 12px 12px;
+text-decoration: none;
+font-size: 1.5em;
+}
+
+li a:hover {
+background-color: #000;
+}
+
+p {
+    max-width: 650px;
+}
+table {
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ededed;
+    min-width: 400px;
+    max-width: 850px;
+}
+
+ul.site li {
+    display: inline;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+table tr td.col1 {
+    max-width: 100px;
+    padding: 0px 0px 0px 30px;
+}

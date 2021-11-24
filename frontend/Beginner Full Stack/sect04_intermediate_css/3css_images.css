@@ -1,0 +1,79 @@
+/*  font-family: 'Comic Neue', cursive;
+    font-family: 'Macondo', cursive;
+    font-family: 'UnifrakturMaguntia', cursive;
+*/
+    
+body {
+    /* background-image: url(zebra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #444;
+    /* text-align: center; */
+    /* ^^^^^aligning text */
+}
+
+h1 {
+    color: #fff;
+    line-height: 2rem;
+    font-family: 'UnifrakturMaguntia', cursive, serif, sans-serif;
+}
+
+h2 {
+    color: #fff;
+    line-height: 2rem;
+    font-family: 'Macondo', cursive, serif, sans-serif;
+}
+
+h3 {
+    color: #fff;
+    line-height: 2rem;
+    font-family: 'Comic Neue', cursive, serif, sans-serif;
+}
+
+a {
+    font-family: 'UnifrakturMaguntia', cursive, serif, sans-serif;
+    font-weight: bold;
+}
+
+.formatting {
+    font-size: 15px;
+    font-style: normal;
+}
+
+.borderImg {
+    /*rounded corners*/
+    /* border-radius: 20px; */
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
+.opacityImg {
+    /*rounded corners*/
+    /* border-radius: 20px; */
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 5px;
+    opacity: .75; /* can do 50% or 0.5 or .5 */
+    display: block;
+    margin: auto;
+}
+
+.responsiveImg {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+p {
+    color: orange;
+    text-align: center;
+}

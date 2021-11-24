@@ -1,0 +1,139 @@
+body {
+    background-image: url(zebra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* See below, another Header 1, but we want to use a different color
+This was overried the grouped style above:
+Order of specificty from least to most == 
+- Elements (value of 1)
+- class, pseudo-class, attribute
+- ID
+- Style attribute
+===================================================================
+ARRANGED AS===
+Style Attr, ID, (class, pseudo-class, attr), Elements
+    1     , 1 ,             1              ,    1
+if one of each, total points would be=      1111pts
+if one style attr and one element, total=   1001
+just one class and one element, total =     11
+just one element, total =                   1
+===================================================================
+
+When the values match, the one that comes last overrides any before it
+So in this case below, green was last, so green is the assigned color
+(commented out to do another example below)
+h1 {
+    color: green;
+}
+
+If we assign it by stating "div h1", any H1 element inside of a DIV tag will receive these properties, anything outside will go with the grouping settings in line 7
+
+In this case, "CSS makes HTML better" will turn to the new color listed below, but anything outside of the div tag will not get this style.
+this will be scored as a point value of 2 
+div = 1
+h1 = 1
+1+1 = 2
+
+NOTE=======================
+The grouping has been moved below the "div h1" element that lies below for the next example, that was placed on line 7:
+body h1 {
+    color: green;
+}
+
+html h1{
+    color: red;
+}
+
+Heirarchy doesn't matter.  Even though "html" is the first element, it still scores the same overall, so which ever one is last, whether 'html h1' or 'body h1', the last will win.  POINT VALUES MATTER, not heirarchy.
+html (1pt) + h1 (1pt) = 2
+body (1pt) + h1 (1pt) = 2
+*/
+
+/*
+======below is commented out for the next example starting at line 52========
+div h1 {
+    color: #a34c00;
+    text-shadow: 3px 3px 2px black;
+}
+*/
+
+/* the CSS code below, .container wins because = 
+10 pt for .container  since .container is a CLASS (class, psuedo-class, attribute)
+1 pt for h1 since it is an element
+TOTAL IS 11
+white "div h1" is only 2 pts
+
+Adding an ID on line 71 below
+*/
+
+#foo {
+    color: black;
+}
+
+[id="foo"] {
+    color: cyan
+}
+
+/*
+in the code above, #foo wins over [id="foo"]
+#foo scores         0100 (having an ID)
+[id="foo"] scores   0010 (having an attribute)
+
+Note on the HTML file, line 19, the style property ADDED to the code, it overrides what is in the CSS code =
+Style Attr, ID, (class, pseudo-class, attr), Elements
+    1     , 1 ,             1              ,    1
+
+so the "<h1 style="color: yellow;" id="foo">" code scores
+style = 1, id = 0, class/attr= 0, elements = 0
+1000pts
+but see the line below, this will NOT override the style because 1000 more than =
+html 0001, body 0001, div 0001, .container 0010, h1 0001, #foo 0100
+114 total....
+*/
+
+html body div.container h1#foo {
+    color: palegreen;
+}
+
+/*
+NOTE, the ONLY WAY to override a style on the HTML page is to do this code below, but just remember, it will OVERRIDE EVERYTHING!
+NO NOT USE THIS: it is such a hard override that it can cause issues when trying to debug the code
+
+ONLY USE "!important" ON PAGE SPECIFIC CSS WHERE YOU NEED TO OVERRIDE THE FOREIGN CSS, like external libraries (bootstrap, or normalized css)
+- be specific about the elements you want to select, causing easy overrides without pushing hard stuff like below   
+*/
+
+h1 {
+    color: lightblue !important;
+    text-shadow: 2px 2px 4px purple !important;
+}
+
+.container h1 {
+    color: red;
+}
+
+div h1{
+    color: green;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    text-shadow: 2px 2px 5px black;
+    line-height: 1rem;
+    font-family: sans-serif;
+    }
+
+.borderImg {
+border: 4px solid white;
+}
+
+ul li { 
+color: #c98e53;
+}
+
+ul > li { 
+color: orchid;
+}
+

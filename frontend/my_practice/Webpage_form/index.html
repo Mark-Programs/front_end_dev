@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="site">
+            <li><a href="#home"><img class="site" src="review.jpg"></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <br>
+
+    <p>We greatly appreciate your business. If there is anything further we could do for you to make our service
+        better,
+        please let us know! The following form will give you the ability to rate us and comment on the service we
+        provided. Thank you for your business!</p>
+
+
+    <!-- ################ FORM TABLE ##################### -->
+    <table>
+        <tr>
+            <td colspan="2">
+                <h2>Please input your review</h2>
+            </td>
+        </tr>
+        <tr>
+            <!-- NAME ENTRY -->
+            <td class="col1">
+                <form action="http://www.example.com/review.php">
+                    <p>Name:</p>
+            <td>
+                <input class="inputtab" type="text" name="username" size="26" maxlength="50" required="required">
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <!-- COMMENTS FIELD -->
+            <td class="col1">
+                <p>Comments:</p>
+            <td>
+                <textarea class="inputtab" name="comments" cols="20" rows="5">Enter your comments</textarea>
+            </td>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <!-- EXPERIENCE RATING -->
+            <td class="col1">
+                <p>Rate your experience:</p>
+            </td>
+            <td>
+                <select name="ratings">
+                    <option value="">5 - Outstanding</option>
+                    <option value="">4 - Very good</option>
+                    <option value="">3 - Could be better</option>
+                    <option value="">2 - Bad</option>
+                    <option value="">1 - Worst</option>
+                </select>
+                </form>
+            </td>
+            </td>
+        </tr>
+        <tr>
+            <!-- EMAIL ENTRY -->
+            <td class="col1">
+                <p>Email:</p>
+            </td>
+            <td>
+                <input type="text" name="email" required="required" size="26"><br>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <!-- SUBMIT BUTTON -->
+            <td class="center">
+                <input class="submit" type="submit" name="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+body {
+    background-color: #cc99ff;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: auto; /* puts equal spacing on each side */
+}
+
+#circle {
+    /*the # denotes that it is for an ID */
+    color: darkred;
+    font-size: 40px;
+}

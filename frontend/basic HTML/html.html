@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--sets style to display in browser tab-->
+    <title>HTML Training</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav>
+        <table>
+            <tr>
+                <td class="clean">
+                    <form action="index.html">
+                        <button type="submit">Home Page</button>
+                    </form>
+                </td>
+                <td class="clean">
+                    <form action="css.html">
+                        <button type="submit">Next: CSS</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </nav>
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h3>Header 3</h3>
+    <h4>Header 4</h4>
+    <h5>Header 5</h5>
+    <h6>Header 6</h6>
+
+    <p>
+        Inline elements: [a] [b] [em] [img]
+        Grouping text and elements into a block: [div]
+        [span] = basically an inline equivalent to [div]
+        <br>
+        <sup>superscript [sup]</sup><sub>subscript [sub]</sub>
+    </p>
+    <blockquote>This is a block quote [blockquote]</blockquote>
+    <p>
+        <b>bold (b)</b>, <i>italic (i)</i>, <em>emphasis (em)</em>, <q>quote (q)</q>, <s>strikethrough (s)</s>
+        <br>
+        <abbr title="Professor">Prof</abbr> is an <b>abbreviation</b> (abbr title="")
+        <br>
+        <acronym title="National Aeronautics and Space Administration">NASA</acronym> is an <b>acryonm</b>
+        (acronym
+        title="National Aeronautics and Space Administration")
+        <br>
+        The book <cite>Harry Potter</cite> by J.K. Rowling....<b>is a cite</b> (cite)
+        <br>
+        A <dfn>black hole</dfn> is a region of space.... <b>Example of a definition</b> (dfn)
+        <br>
+        Address: (address)
+    </p>
+    <address>
+        <p><a href="mailto:test@test.com">[a href="maildto(colon)test@test.com"](displayText)[/a]</a></p>
+        <p>6700 Hollister Rd, Houston, TX</p>
+    </address>
+    <p>
+        It was the <del>best</del> <ins>worst</ins> idea ever (delete (del)/insert (ins)).
+        <br>
+
+
+    <ul>
+        <li>this is an unordered list (ul)</li>
+        <li>This is how it is displayed (li)</li>
+    </ul>
+    <ol>
+        <li>This is an ordered list (ol)</li>
+        <li>This is how it is displayed (li)</li>
+        <ul>
+            <li>and this is a nested list</li>
+            <li>Just add another list inside of it</li>
+        </ul>
+    </ol>
+    <dl>
+        <dt>Definition List title (dt)</dt>
+        <dd>This is what it looks like (dd)</dd>
+    </dl>
+    </p>
+
+
+    <!--######################## LINKS #######################-->
+    <h2>LINKS</h2>
+
+    <p>
+        [a href="(URL)"]name to display[/a]
+        <br>
+        Link to other pages on same site: [a href="index.html"]name to display[/a]
+        <br>
+        Link on the same page: <br>
+        <img src="images/linkOnSamePage.jpg">
+    </p>
+
+
+    <!--######################## DIRECTORY STRUCTURE #######################-->
+
+    <h2>DIRECTORY STRUCTURE</h2>
+
+    <p>
+    <ul>
+        <li>Parent Folder</li>
+        <ul>
+            <li>Child Folder</li>
+            <ul>
+                <li>Grandchild Folder</li>
+                <ul>
+                    <li>Great Grandchild Folder....</li>
+                </ul>
+            </ul>
+        </ul>
+    </ul>
+    <ul>
+        <li>Same Folder: <b>a href="index.html"</b></li>
+        <li>Child folder: <b>a href="ChildFolder/name.html"</b></li>
+        <li>grandchild: <b>a href="GCfolder/ChildFolder/name.html"</b></li>
+        <li>GOING BACKWARDS:</li>
+        <ul>
+            <li>Parent: <b>a href="../name.html"</b></li>
+            <li>Grandparent: <b>a href="../../name.html"</b></li>
+        </ul>
+    </ul>
+
+    </p>
+
+    <!--######################## IMAGES #######################-->
+
+    <h2>IMAGES</h2>
+
+    <p>
+        <img class="img_border" src="images/img.jpg"><img class="img_border" src="images/gif&png.jpg">
+        <br>
+        Note: VECTOR images are often used to create line drawings for logos. The <b>advantage</b> of this is
+        you can
+        increase the size of the image without affecting the quality of the image.
+        <br> Current method to use: create a bitmap version and use that on the website. SVG (Scalable Vector
+        Graphics)
+        is a
+        new format that can be used, but is relative new and not widespread.
+        <br>
+        Animated GIF:
+        <br> <img class="img_border" src="images/loading.gif">
+        <br>
+        Transparency: Use a transparent GIF, or a PNG (Transparent PNG not fully supported in older
+        browswers...mainly
+        IE6)
+        <br>
+        <img class="img_border" src="images/figurecaption.jpg">
+        <br>
+    </p>
+
+    <!--######################## TABLES #######################-->
+
+    <h2>TABLES</h2>
+
+    <p>
+    <table>
+        Table with CSS formatting:
+        <tr>
+            <th></th>
+            <th scope="col">Column1</th>
+            <th scope="col">Column2</th>
+            <th scope="col">Column3</th>
+        </tr>
+        <tr>
+            <th scope="row">Row1</th>
+            <td> R1-C1</td>
+            <td> R1-C2</td>
+            <td rowspan="3">merge rows with 'rowspan'</td>
+        </tr>
+        <tr>
+            <th scope="row">Row2</th>
+            <td> R2-C1</td>
+            <td> R2-C2</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td colspan="2">Merge cells with 'colespan'</td>
+        </tr>
+
+    </table>
+    Row/Column titles: [th scope="row/column"]name[/th]
+    <br>
+    Also NOTE: [thead], [tbody], [tfoot] elements help people who use screen readers, so make use of them.
+    <br>
+    <img class="img_border" src="images/tables.jpg">
+    </p>
+
+    <!--######################## FORMS #######################-->
+    <hr>
+    <hr>
+    <h2>FORMS</h2>
+
+    <h4>Username & Password Form ==========</h4>
+    <p>
+    <form action="http://www.example.com/login.php">
+        <p>Username:
+            <input type="text" name="username" size="15" maxlength="30" />
+        </p>
+        <p>Password:
+            <input type="text" name="password" size="15" maxlength="30" />
+        </p>
+    </form>
+    </p>
+
+    <h4>Comment Box =====================</h4>
+    <p>
+    <form>
+        <p>What did you think of this gig?</p>
+        <textarea name="comments" cols="20" rows="4">Enter your comments....</textarea>
+    </form>
+    </p>
+
+    <h4>Radio Button =================</h4>
+    <p>
+    <form action="http://www.example.com/profile.php">
+        <p>Please select your favorite genre:
+            <br>
+            <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+            <input type="radio" name="genre" value="pop" /> Pop
+            <input type="radio" name="genre" value="jazz" /> Jazz
+        </p>
+    </form>
+    </p>
+
+    <h4>Checkbox =====================</h4>
+    <p>
+    <form action="http://www.example.com/profile.php">
+        <p>Please Select your favorite musical service(s):
+            <br>
+            <input type="checkbox" name="service" value="itunes" checked="checked" /> iTunes
+            <input type="checkbox" name="service" value="lastfm" /> Last.fm
+            <input type="checkbox" name="service" value="spotify" /> Spotify
+        </p>
+    </form>
+    </p>
+
+    <h4>Dropdown =====================</h4>
+    <p>
+    <form action="http://www.example.com/profile.php">
+        <p> What device do you listen to music on? </p>
+        <select name="devices">
+            <option value="ipod">iPod</option>
+            <option value="radio">Radio</option>
+            <option value="computer">Computer</option>
+        </select>
+    </form>
+    </p>
+
+    <h4>Multiple Select Box ==============</h4>
+    <p>
+    <form action="http://www.example.com/profile.php">
+        <p>Do you play an y of the following instruments?
+            <br>
+            (You can select more than one option by holding CTRL on PC, or CMD on Mac, and clicking)
+        </p>
+        <select name="instruments" size="3" multiple="multiple">
+            <option value="guitar" selected="selected">Guitar</option>
+            <option value="drums" selected="selected">Drums</option>
+            <option value="bass" selected="selected">Bass</option>
+            <option value="keyboard" selected="selected">Keyboard</option>
+        </select>
+    </form>
+    </p>
+
+    <h4>File Input Box ====================</h4>
+    <p>
+    <form action="http://www.example.com/upload.php" method="post">
+        <p>Upload your song in MP3 format:</p>
+        <input type="file" name="user-song" /><br>
+        <input type="submit" value="Upload" />
+    </form>
+    </p>
+
+    <h4>Submit Button ====================</h4>
+    <p>
+    <form action="http://www.example.com/subscribe.php">
+        <p>Subscribe to our email list:</p>
+        <input type="text" name="email" />
+        <input type="submit" name="subscribe" value="Subscribe" />
+    </form>
+    </p>
+
+    <h4>Image Button ====================</h4>
+    <p>
+    <form action="http://www.example.com/subscribe.php">
+        <p>Subscribe to our email list:</p>
+        <input type="text" name="email" />
+        <input type="image" src="subscribe_button.jpg" height="20" />
+    </form>
+    </p>
+
+    <h4>Button & Hidden Controls ========</h4>
+    <p>
+    <form action="http://www.example.com/add.php">
+        <button><img src="images/plus.gif" alt="add" height="25" width="35" />
+            Add</button>
+        <input type="hidden" name="bookmark" value="lyrics" />
+    </form>
+    </p>
+
+    <h4>Labelling Form Controls</h4>
+    <p>
+        <label>Age: <input type="text" name="age" /></label>
+        <br>
+        Gender:
+        <input id="female" type="radio" name="gender" value="f">
+        <label for="female">Female</label>
+        <input id="male" type="radio" name="gender" value="m">
+        <label for="male">Male</label>
+        <!--FOR: for attribute states which form control the label belongs to.-->
+    </p>
+
+    <h4>Grouping Form Elements</h4>
+    <p>
+    <table>
+        <!--Placing in a table to condense the border around all the elements, only for this purpose-->
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Contact details</legend>
+                    <label>Email:<br />
+                        <input type="text" name="email" /></label><br />
+                    <label>Mobile:<br />
+                        <input type="text" name="mobile" /></label><br />
+                    <label>Telephone:<br />
+                        <input type="text" name="telephone" /></label>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+
+    </p>
+
+
+    <h4>HTML5 - Form Validation</h4>
+    <table>
+        <!--Placed in a table for even spacing, not because it is required-->
+        <tr>
+            <form action="http://www.example.com/login" method="post">
+                <td class="validation"><label for="username">Username:</label></td>
+                <td class="validation"><input type=" text" name="username" required="required" />
+                </td>
+        </tr>
+        <tr>
+            <td class="validation"><label for=" password">Password:</label></td>
+            <td class="validation"><input type=" text" name="password" required="required" />
+            </td>
+        </tr>
+        <tr>
+            <td class="validation"></td>
+            <td class="validation"><input type="submit" value="Submit" /></td>
+        </tr>
+        </form>
+    </table>
+
+    <h4>HTML5 - Date Input</h4>
+    <form action="http://www.example.com/bookings/" method="post">
+        <label for="username">Departure date:</label>
+        <input type="date" name="depart" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <h4>HTML5 - Email & URL Input</h4>
+    <form action="http://www.example.org/subscribe.php">
+        <p>Please enter your email address:</p>
+        <input type="email" name="email" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <h4>HTML5 - Search Input</h4>
+    <form action="http://www.example.com/search.php">
+        <p>Please enter your search: </p>
+        <input type="search" name="search" />
+        <input type="submit" value="Search" />
+    </form>
+
+    <p>OR</p>
+
+    <form action="http://www.example.com/search.php">
+        <p>Please enter your search</p>
+        <input type="search" name="search" placeholder="Enter Keyword" />
+        <input type="submit" value="Search" />
+    </form>
+
+    <hr>
+    <hr>
+    <!-- ########################### EXTRA MARKUP ########################### -->
+
+    <p>
+        Doctypes help render the page correctly
+        <br>
+        HTML 5:
+        <br>
+        At the top of the html page, put <\!DOCTYPE html> (without the \)
+            <br>
+            NOTE: There are other options for HTML 4, XHTML, etc.
+            <br>
+    </p>
+
+    <h4>iframe</h4>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27678.957433339354!2d-95.5088896!3d29.868031999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c58a002dbabb%3A0x7f642a7594d037aa!2sReynolds%20And%20Reynolds!5e0!3m2!1sen!2sus!4v1637169816105!5m2!1sen!2sus"
+        width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p>
+        Other options thta can be included:
+    <ul>
+        <li>scrolling="none" (old HTML4 attribute, does not apply to HTML5)</li>
+        <li>frameborder="#" (old HTML4 attribute, does not apply to HTML5)</li>
+        <li>seamless (new for HTML5 where scrollbars are not desired, doesn't need a value</li>
+    </ul>
+    </p>
+    <h4>meta</h4>
+    <p>lives inside the HEAD element, containing information about the webpage
+        <br>
+        Most common attributes: NAME and CONTENT
+        <br>
+        <img class="img_border" src="images/meta.jpg">
+    </p>
+
+    <h4>Escape Characters</h4>
+    <p>
+        Characters where you use an alt code for to type them out.
+    </p>
+    <img src="images/escape_char.jpg" height="50%" width="50%">
+
+
+    <hr>
+    <hr>
+    <h4>Embedded Audio</h4>
+    <p>Inline Elements:
+    <ul>
+        <li>controls: input this if you want controls shown</li>
+        <li>autoplay: input this if you want it to autoplay</li>
+        <li>preload: indicates what the browswer should do if the player is not set to autoplay</li>
+        <li>loop: input this to loop the audio</li>
+        <li>type: not commonly used</li>
+        <li>source: can specify more than one audio file as the source, within the audio tag. So if you want to
+            reference an .mp3 and .ogg, you can and the browser can pick which one it wants (see code for second
+            player).
+            <ul>
+                <li><b>MP3</b>: Safari 5+, Chrome 6+, IE9</li>
+                <li><b>Ogg Vorbis</b>: FF3.6, Chrome 6, Opera 1.5, IE9</li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <audio src="audio/sound_file.mp3" controls>
+        <p>This browser does not support our audio format</p>
+    </audio>
+    <audio controls>
+        <source src="audio/sound_file.mp3">
+        <source src="audio/sound_file.ogg">
+        <p>This browser does not support our audio format</p>
+    </audio>
+
+    <h4>Video</h4>
+    <p>Video Elements
+    <ul>
+        <li>'preload' values:</li>
+        <ul>
+            <li>none: doesn't load video until play is pressed</li>
+            <li>auto: browser downloads the video when the pages loads</li>
+            <li>metadata: browser only gets data (size, first frame, track list, and duration</li>
+        </ul>
+        <li>src: path to video</li>
+        <li>poster: cover image to show while it is downloading (jpg)</li>
+        <li>width, heigh: sets player size</li>
+        <li>controls: add this element to show controls</li>
+        <li>autoplay: plays video once it loads</li>
+        <li>loop: loops the video</li>
+    </ul>
+    NOTE: can also select multiple sources, same as audio, can also specify codecs required.
+    </p>
+    <video src="video/video_example.mp4" poster="#" width="400" height="300" preload controls>A video of the earth
+        rotating.</video> <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    // first half of "if" is for safari, after the "||" for all others
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;  // Safari
+        document.documentElement.scrollTop = 0;  // Chrome, FF, IE, Opera
+    }
+
+</script>
+
+
+</html>

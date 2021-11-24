@@ -1,0 +1,36 @@
+body {
+    background-image: url(zebra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The lines below show grouping things together to save space when writing CSS */
+h1, h2, h3 {
+color: #fff;
+text-shadow: 2px 2px 5px black;
+line-height: 1rem;
+font-family: sans-serif;
+}
+
+/* h2 {
+color: lightblue;
+text-shadow: 2px 2px 3px darkslategray;
+} */
+
+.borderImg {
+border: 4px solid white;
+}
+
+ul li { /* ul is parent, li is child :: "every list item in unordered list"*/
+color: #c98e53;
+}
+
+ul > li { /* any unordered list that has a child list item that is ONLY 1 level deep will inherit these style rules */
+color: orchid;
+}
+
+/*
+ol li {
+    color: yellow;
+}
+*/

@@ -1,0 +1,107 @@
+
+/* #################### DEFAULTS ############################ */
+
+/* the code below ensures the browser takes theses elements and displays them as a block */
+nav,
+header,
+footer {
+    display: block
+}
+
+/* The body has 1px line height, with a margin of 0 (sets everything edge to edge (removes the browser's auto-inserting padding/margins at the sides of the page */
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+/* ###################### NAV BAR ######################### */
+
+nav {
+    width: 100%;  /* always 100% width, good for dsktp and mobile */
+    margin: 0;
+    
+}
+
+nav ul {
+    background-color: #2652ff;
+    /* Next line ensures the nav bar fits on the mobile device screen 
+    hidden: when the browser collapses, all elements that are too big to fit on the screen, the content will be clipped and no side scroll comes up. This keeps it clean.*/
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topnav li {
+    /* line below ensures no bullet points */
+    list-style: none;
+    float: left;
+}
+
+ul.topnav li.topnav_right {
+    float: right;
+    
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+ul.topnav li a:hover {
+    background-color: darkgrey;
+    color: #fff
+}
+
+/* hide unicode on desktop (actually hides it 100% natively)
+    NOTE: The display property is very easily overwritten.  See the 2nd code block in MOBILE... */
+ul.topnav li.dropdownIcon {
+    display: none;
+}
+
+/* ################ MOBILE ####################### */
+
+/* 
+ul.topnav (deal with things when it isn't responsive)
+ul.topnav.responsive (deal with things when it is responsive)
+*/
+
+
+/* media query, used to set specs for the Nav Dropdown in Mobile mode */
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:nth-child(1)) { /* without the "not" this will cause the nav bard to vanish, no set hight due to no text.
+        the not() code tells CSS to hide all except the first list item, which is HOME */
+        display: none; 
+    }
+    ul.topnav li.dropdownIcon {
+        display: block; /* placing in block makes it easier to position the element */
+        float: right;
+    }
+
+    ul.topnav.responsive li.dropdownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    ul.topnav.responsive {
+        position: relative;  /* make sure the NavBar does not move when in mobile mode */
+    }
+
+    ul.topnav.responsive li {
+        display: inline;  /* lines everything up */
+        float: none; /* removes inherited float: left */
+    }
+
+    ul.topnav.responsive li a {
+        display: block;  /*overwriting display tags for the achor tags */
+        text-align: left;
+    }
+
+}
+
+    

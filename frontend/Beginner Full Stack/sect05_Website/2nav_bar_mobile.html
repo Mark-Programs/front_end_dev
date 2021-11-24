@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        This file will add a dropdown icon to the NavBar, and also make the NavBar mobile compatible
+    -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Practice Weeb-page</title>
+    <link rel="stylesheet" href="2nav_bar_mobile.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+            <!--id for JS interaction-->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="topnav_right"><a href="#signup">Sign Up</a></li>
+            <li class="topnav_right"><a href="#signin">Sign In</a></li>
+            <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+            <!--  ^^ Unicode can be styled like text
+                    onclick is used to call a function when clicked
+                    the href keep the menu open-->
+
+        </ul>
+    </nav>
+
+
+
+    <script>
+        /* In this example, we are using embedded JavaScript for easy reading
+        best practice is external JS files
+        - Step 1 = add onclick to achor tag <a> for the dropdownIcon, this will be the
+            function name so JavaScript can build the menu when it is clicked. */
+        function dropdownMenu() {
+            /* checks if the menu is in a "mobile" state or "desktop" state */
+            var x = document.getElementById("dropdownClick"); /* this gets the ID from the HTML */
+            if (x.className === "topnav") {
+                x.className += " responsive";
+                // change topnav to topnav.responsive
+                /* creates the topnav.reesponsive class when clicked, so it will apply CSS style to it for mobile use */
+            }
+            else {
+                x.className = "topnav";
+            }
+
+        }
+    </script>
+
+</body>
+
+
+</html>

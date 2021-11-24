@@ -1,0 +1,68 @@
+/*
+There are 3 things that can be done with fonts, we can work with
+- font families
+- font styles
+- font size
+Normally FONT FAMILIES are created inside "body {}", or you can create an HTML selector (used here)
+Note: when you link a font family with more than one word, you have to use double quotes....like
+    font-family: "Times New Roman";
+
+NOTE: you can define find size via "px" "rem" unit
+difference between "em" and "rem"
+    em = relative to the font-sie of its direct OR nearest parent
+    rem = only relative to the html (root) font-size
+remember, when setting font sizes with PIXELS, you are setting a HARD SET SIZE, regardless of default browser size, etc
+    --- use 'rem' units and 'px' according, and TEST THOROUGHLY
+2em = 2x the default browser size (typically 16px)
+
+*/
+
+html {
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    /* background-image: url(zebra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #444;
+    text-align: center;  /* aligning text */
+}
+
+h1, h2, h3 {
+    color: #fff;
+    line-height: 1rem;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 30px;
+    font-style: normal;
+}
+
+.formatting {
+    font-size: 15px;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none; /* overrides the default link style rule of underlining the text */
+    font-size: 3em;
+    color: greenyellow;
+    letter-spacing: 10px;
+    word-spacing: 30px;
+    text-transform: uppercase;
+}
+
+.borderImg {
+    border: 4px solid white;
+}
+
+ul li { 
+    color: #c98e53;
+}
+
+ul > li { 
+    color: orchid;
+}
+

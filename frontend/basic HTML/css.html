@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--sets style to display in browser tab-->
+    <title>CSS Training</title>
+    <link rel="stylesheet" href="css.css">
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <nav>
+        <table>
+            <tr>
+                <td class="clean">
+                    <form action="html.html">
+                        <button type="submit">Back: HTML</button>
+                    </form>
+                </td>
+                <td class="clean">
+                    <form action="index.html">
+                        <button type="submit">Home Page</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </nav>
+
+    <h1>CSS3 Guide</h1>
+    <hr>
+    <hr>
+    <h2>Intro to CSS</h2>
+    <p>
+    <ul>
+        <li>CSS associates style rules with HTML elements</li>
+        <li>CSS properties affect how elements are displayed</li>
+        <li>Can speficy CSS within the HTML file, or externally</li>
+    </ul>
+    <table>
+        <tr>
+            <td>External CSS</td>
+            <td>Internal CSS</td>
+        </tr>
+        <tr>
+            <td><img class="border" src="images/external_css.jpg"></td>
+            <td><img class="border" src="images/internal_css.JPG"></td>
+        </tr>
+    </table>
+    </p>
+
+    <hr>
+    <hr>
+    <h2>CSS Selectors</h2>
+    <img class="border" src="images/selectors.jpg">
+
+
+    <hr>
+    <hr>
+    <h2>CSS Rules: Cascading</h2>
+    <p>
+        The last rule referring to an element takes priority, unless specificity takes over.
+    <table>
+        <ul>
+            <tr>
+                <td class="wide" colspan="5">POINT SYSTEM</TD>
+            </tr>
+            <tr>
+                <td class="wide">Items</td>
+                <td class="wide">Style Attribute</td>
+                <td class="wide">ID (#)</td>
+                <td class="wide"> class="wide"Class, Pseudo-class, Attr</td>
+                <td class="wide">Elements</td>
+
+            </tr>
+            <tr>
+                <td class="wide">Values</td>
+                <td class="wide">0</td>
+                <td class="wide">0</td>
+                <td class="wide">0</td>
+                <td class="wide">0</td>
+            </tr>
+        </ul>
+    </table>
+    NOTE: one point for each item! Highest total wins for which style gets assigned
+    <br> ---- (if values are even, which ever entry comes later wins)
+    <br>
+    One style attr and one element: 1001
+    <br>
+    One class and one element: 0011
+    <br>
+    One element: 0001
+    <br>
+    </p>
+
+    <h2>Inheritance</h2>
+    <img class="border" src="images/inheritance.jpg">
+    <p>NOTE: If the font family/color properties are specified in the <\body> element, they will apply to MOST child
+            elements. Due to the value of the font-family property is INHERITED by child elements.
+            <br>
+            The boackground-color or border elements are NOT inherited.
+            <br>
+            Can be inherited by using the <\div> element
+    </p>
+
+    <hr>
+    <hr>
+    <h2>Color in CSS</h2>
+    <h4>Foreground (Text) Color</h4>
+    <p>Colors can be assigned in the following ways: RGB, HEX Code, and Color Names
+        <br>
+        RGB example: rgb(100,100,90)
+        <br>
+        HEX examples: #363636 #000 #FFFFFF #abc333 etc
+        <br>
+        Name examples: black darkslategrey red orchid etc
+        <br><br>
+        Example code:<br>
+        <img class="border" src="images/forground.jpg">
+    </p>
+
+
+    <h4>Background Color</h4>
+    <p>
+        Same color assignments as foreground
+        <br><br>
+        Example code:
+        <br>
+        <img class="border" src="images/background.jpg">
+    </p>
+
+    <h4>Color Contrast & Opacity</h4>
+
+    <table>
+        <tr>
+            <td class="wide"><img src="images/lowcontrast.jpg"></td>
+            <td class="wide"><img src="images/highcontrast.jpg"></td>
+            <td class="wide"><img src="images/mediumcontrast.jpg"></td>
+        </tr>
+        <tr>
+            <td class="wide">Harder to read text</td>
+            <td class="wide">Easier to read</td>
+            <td class="wide">For long spans of text</td>
+        </tr>
+        <tr>
+            <td class="wide">Horrible for visually impaired</td>
+            <td class="wide">Ideal for visuall impaired, not good for long text</td>
+            <td class="wide">dk grey txt on white, or off-white on dark</td>
+        </tr>
+    </table>
+    <img class="border" src="images/opacity.jpg">
+
+    <table>
+        <p>HSL Colors</p>
+        <tr>
+            <td class="wide">Hue</td>
+            <td class="wide">Value is from 0 to 360 (color wheel)</td>
+        </tr>
+        <tr>
+            <td class="wide">Saturation</td>
+            <td class="wide">The amount of gray in a color: 0 - 100%</td>
+        </tr>
+        <tr>
+            <td class="wide">Lightness</td>
+            <td class="wide">0% (black) to 100% (white), 50% is normal</td>
+        </tr>
+        <tr>
+            <td colspan="2"><img class="border" src="images/hslcolor.jpg"></td>
+        </tr>
+    </table>
+
+    <hr>
+    <hr>
+    <h2>CSS Text</h2>
+    <table>
+        <tr>
+            <td class="wide"><img src="images/serif.jpg"></td>
+            <td class="wide"><img src="images/sansserif.jpg"></td>
+            <td class="wide"><img src="images/monospace.jpg"></td>
+        </tr>
+        <tr>
+            <td class="wide">Traditionally used for long passages of text (easier to read)</td>
+            <td class="wide">Better for smaller text due to low resolutions</td>
+            <td class="wide">Commonly used for code since the characters align nicely</td>
+        </tr>
+    </table>
+    <img class="border" src="images/font101.jpg">
+
+    <h4>Typefaces</h4>
+    <img class="border" src="images/typefaces.jpg"><img class="border" src="images/typefaces2.JPG">
+
+    <table>
+        <p>Wider range of typefaces</p>
+        <tr>
+            <td class="wide">Technique</td>
+            <td class="wide">Info</td>
+            <td class="wide">Issues</td>
+            <td class="wide">Licensing</td>
+            <td class="wide">Choices</td>
+            <td class="wide">Suitable For:</td>
+
+        </tr>
+        <tr>
+            <td class="wide">Font-Family</td>
+            <td class="wide">User needs that typface installed</td>
+            <td class="wide">Limited choices of typefaces users have installed</td>
+            <td class="wide">None</td>
+            <td class="wide">Limited choices of typefaces users have installed</td>
+            <td class="wide">Any length of text</td>
+        </tr>
+        <tr>
+            <td class="wide">Font-Face</td>
+            <td class="wide">CSS specifies where font can be downloaded from if not on local computer</td>
+            <td class="wide">User has to download the file, can slow webpage loading</td>
+            <td class="wide">License to use the font must permit its distribution using @font-face</td>
+            <td class="wide">Choices limited, few typefaces can be distributed this way</td>
+            <td class="wide">Any length of text</td>
+        </tr>
+        <tr>
+            <td class="wide">Service-Based-Font-Face</td>
+            <td class="wide">Commercial services give users access to wider range of fonts using @font-face</td>
+            <td class="wide">Ongoing fee to cover licenses</td>
+            <td class="wide">Service takes care of the licensing issues with people who made the font</td>
+            <td class="wide">Each service offers different fonts based on agreements with font foundaries</td>
+            <td class="wide">Any length of text</td>
+        </tr>
+        <tr>
+            <td class="wide">Images</td>
+            <td class="wide">Can create a graphic that contains text (if desire different typeface)</td>
+            <td class="wide">People who use screen readers rely on 'alt text' to know what is said</td>
+            <td class="wide">Can use any typeface that you have license to use on your computer</td>
+            <td class="wide">Wide choice due to being able to use any typeface you have a license for</td>
+            <td class="wide">Not suitable for long passages of text</td>
+        </tr>
+        <tr>
+            <td class="wide">sIFR</td>
+            <td class="wide">Embedded into a flash movie, JavaScript replaces specified HTML text with flash version
+            </td>
+            <td class="wide">User needs flash and JS enabled</td>
+            <td class="wide">May commercial makers allow, may need to pay extra web-use license</td>
+            <td class="wide">Provides choices, many major typeface mfg's allow this</td>
+            <td class="wide">Not suitable for long passages of text</td>
+        </tr>
+        <tr>
+            <td class="wide">CUFON</td>
+            <td class="wide">similar to sIFR, uses JS to create SVG/VML version of text</td>
+            <td class="wide">Requires JS enabled. Users cannot select text, text cannot change when user hovers over it
+            </td>
+            <td class="wide">Some mfg's allow use, but need to check licensing</td>
+            <td class="wide">Slightly less choices than sIFR, some mfg's not offering in CUFON</td>
+            <td class="wide">Not suitable for long passages of text</td>
+        </tr>
+    </table>
+    <p>Note: If on a Mac, be careful what you use because it may not render correctly on PC. PC, it should look fine on
+        a Mac.</p>
+
+    <h4>Font-Family</h4>
+    <table>
+        <tr>
+            <td class="wide"><img class="border" src="images/fontfamily.jpg"></td>
+            <td>=></td>
+            <td class="wide"><img class="border" title="Result" src="images/fontfamresult.jpg"></td>
+        </tr>
+    </table>
+
+    <h4>Type Size</h4>
+    <table>
+        <tr>
+            <td class="wide"><b>TYPE SIZE</b></td>
+            <td class="wide">Pixels</td>
+            <td class="wide">Percentages</td>
+            <td class="wide">EMs</td>
+        </tr>
+        <tr>
+            <td class="wide">12px Scale</td>
+            <td class="wide">h1=24px, h2=18px, h2=14px, body=12px</td>
+            <td class="wide">h1=200%, h2=150%, h2=117%, body=75%</td>
+            <td class="wide">h1=1.5em, h2=1.3em, h2=1.17em, body=100%, p=0.75em</td>
+        </tr>
+        <tr>
+            <td class="wide">16px Scale</td>
+            <td class="wide">h1=32px, h2=24px, h2=18px, body=16px</td>
+            <td class="wide">h1=200%, h2=150%, h2=133%, body=100%</td>
+            <td class="wide">h1=2em, h2=1.5em, h2=1.125em, body=100%, p=1em</td>
+        </tr>
+        <tr>
+            <td class="wide">Misc Info</td>
+            <td class="left">- Px is best to ensure font is as desired (% & EMs more likely to vary if user changed
+                default txt size in browser)<br>
+                - Pixels relative to resolution, less resolution=bigger text<br>
+                - Can also use "pt" for point sizes instead of px. Only do this for style sheets for printer friendly
+                versions of pages</td>
+            <td class="left">- Default txt in broswer is 16px. Scaling is based on this 100% value. <br>
+                - If default txt size is
+                changed by user, the site will scale accordingly.</td>
+            <td class="left">- Change size of txt based on size of txt in the parent element. Similar rules to
+                percentages. <br>
+                - The extra "P" rule above is for IE6 and 7 (deprecated), as they used to exaggerate the size
+                of the other text</td>
+        </tr>
+    </table>
+
+    <h4>@font-face</h4>
+    <p>Allows the use of a font, even if not installed on client, by allowing the specifying of a path to copy the font,
+        which it then downloads if not available locally.</p>
+    <table>
+        <tr>
+            <td class="wide"><img class="border" src="images/fontfacecode.jpg"></td>
+            <td>=></td>
+            <td class="wide"><img class="border" title="Result" src="images/fontfaceresult.jpg"></td>
+        </tr>
+    </table>
+    <img class="border" src="images/fontformat.jpg">
+    <p>Above is a more complicated font-face rule.
+        <br>
+        NOTE: Different browswers support different formats for fonts (just like they support different audio/video
+        formats.
+    </p>
+    <h4>Other Modifiers</h4>
+
+    <table>
+        <tr>
+            <td class="left"><b>font-weight:</b> (normal, bold);</td>
+            <td class="left"><b>font-style:</b> (normal, italic, oblique);</td>
+        </tr>
+        <tr>
+            <td class="wide"><img class="border" src="images/font-weight.jpg"></td>
+            <td class="wide"><img class="border" title="Result" src="images/font-style.jpg"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td class="left"><b>text-transform:</b> (uppercase, lowercase, capitalize);</td>
+            <td class="left"><b>text-decoration:</b> (none, underline, overline, line-through, blink);</td>
+        </tr>
+        <tr>
+            <td class="wide"><img class="border" src="images/text-transform.jpg"></td>
+            <td class="wide"><img class="border" src="images/text-decoration.jpg"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td class="left"><b>line-height:</b> (#em, #px, #pt, #rem);</td>
+            <td class="left"><b>text-decoration:</b> (none, underline, overline, line-through, blink);</td>
+        </tr>
+        <tr>
+            <td class="wide"><img class="border" src="images/lineheight.jpg"></td>
+            <td class="wide"><img class="border" src="images/letterwordspacing.jpg"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td class="left"><b>text-align:</b> (left, right, center, justify);<br>
+                Justify: every line in the paragraph, excep the last line, be set to take the full width of the
+                containing box</td>
+            <td class="left"><b>vertical-align:</b> (text-top, text-bottom, baseline, sub, super, top, middle, bottom);
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td class="left"><b>text-indent:</b> (#px);</td>
+            <td class="left"><b>text-shadow:</b> (#px #px #px #px #HEXVALUE;)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><br></td>
+        </tr>
+        <tr>
+            <td class="left"><b>:first-letter, :first-line</b></td>
+            <td class="left"><b>:link, :visited</b></td>
+        </tr>
+        <tr>
+            <td class="left"><img class="border" src="images/firstletter&line.jpg"></td>
+            <td class="left"><img class="border" src="images/link_visited.jpg"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><br><b>Responding to Users</b></td>
+        </tr>
+        <tr>
+            <td class="left" colspan="2"><b>:hover, :active, :focus</b><br>
+                Hover is applied when a user hovers over the element,<br>
+                Active is applied when it gets activated by the user,<br>
+                Focus is applied when an element has focus(when a browser discovers you are ready to interact with an
+                element: IE when a cursor is in a form input ready to accept typing)</td>
+        </tr>
+        <tr>
+            <td class="left" colspan="2"><img class="border" src="images/hover_active_focus.jpg"></td>
+        </tr>
+    </table>
+    <h4>Attribute Selectors</h4>
+    <img class="border" src="images/attribute_selector.jpg">
+
+    <hr>
+    <hr>
+    <h2>Boxes</h2>
+
+    <h4>Width / Height</h4>
+    <img class="border" src="images/box_dimensions.jpg">
+
+    <h4>Limiting Width</h4>
+    <p>Just use min-width: ##px; AND max-width: ##px; to set your min/max in CSS. EZ-PZ</p>
+    <table>
+        <tr>
+            <td><img src="images/notfound.jpg" class="sell"></td>
+            <td class="description">This is some cool entry to sell one heck of a jazz saxophone. You know, the kind any
+                pro would want. You don't want it, but pros would. So you'd skip over this item to find something that
+                suits your tastes better.</td>
+            <td>$8400</td>
+        </tr>
+        <tr>
+            <td><img src="images/notfound.jpg" class="sell"></td>
+            <td class="description">This is a really cheap and beat up saxophone from some highschool student that has
+                since moved to college. He sold this because he was not going to use it for marching band any more. The
+                laquer is all rubbed off and there is corrosion on it. Trust me, you don't want this one.</td>
+            <td>$900</td>
+        </tr>
+        <tr>
+            <td><img src="images/notfound.jpg" class="sell"></td>
+            <td class="description">Now this is the saxophone you want. It is a great intermediate saxophone that will
+                sound great and last for years to come. It is in mint condition and the seller wants it gone. You won't
+                find a better deal anywhere!</td>
+            <td>$2500</td>
+        </tr>
+    </table>
+
+    <h4>Limiting Height p305</h4>
+    <table>
+        <tr>
+            <td class="wide"><img class="border" src="images/min-max-height.jpg"></td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+
+<!-- ############################ SCRIPT ##############################-->
+<script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    // first half of "if" is for safari, after the "||" for all others
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;  // Safari
+        document.documentElement.scrollTop = 0;  // Chrome, FF, IE, Opera
+    }
+
+</script>
+
+</html>

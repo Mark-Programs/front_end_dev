@@ -1,0 +1,58 @@
+
+/* #################### DEFAULTS ############################ */
+
+/* the code below ensures the browser takes theses elements and displays them as a block */
+nav,
+header,
+footer {
+    display: block
+}
+
+/* The body has 1px line height, with a margin of 0 (sets everything edge to edge (removes the browser's auto-inserting padding/margins at the sides of the page */
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+/* ###################### NAV BAR ######################### */
+
+nav {
+    width: 100%;  /* always 100% width, good for dsktp and mobile */
+    margin: 0;
+    
+}
+
+nav ul {
+    background-color: #2652ff;
+    /* Next line ensures the nav bar fits on the mobile device screen 
+    hidden: when the browser collapses, all elements that are too big to fit on the screen, the content will be clipped and no side scroll comes up. This keeps it clean.*/
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topnav li {
+    /* line below ensures no bullet points */
+    list-style: none;
+    float: left;
+}
+
+ul.topnav li.topnav_right {
+    float: right;
+    
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+ul.topnav li a:hover {
+    background-color: darkgrey;
+    color: #fff
+}

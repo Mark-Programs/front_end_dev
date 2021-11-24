@@ -1,0 +1,95 @@
+/* 
+MARGIN: adds space AROUND an element
+    ie: some space around an image or text
+PADDING: adds space WITHIN an element
+    ie: givs some space around text and a button's frame
+*/
+
+body {
+    /* background-image: url(zebra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #444;
+    /* text-align: center; */
+    /* ^^^^^aligning text */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    opacity: 1;
+    margin: auto;  
+    display: block;
+    /* 
+    NOTE: margins can be "auto", "inherit", ##px, or ##% 
+        and the side to apply it to can be specified 
+    */
+}
+
+.borderImg {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+/* This "row" class below will act somewhat like a container.
+         */
+.row {
+    display: flex;
+    width: 100%
+}
+
+/* The code below states that "whenever a ROW is created, we want something to happen AFTER it is created */
+.row::after {
+    display: block;  /* for every row created, we want it to stack */
+    clear: both;  /* clears any float properties so images sit in the row properly, removes any inheritance */
+    content: "";  /* this makes all the content "reset" */
+}
+
+/* when working with columns using a grid system, the grid has a total column width of 12.
+SOOOOOO
+the col-12 (column width of 12 with 100% of the width, meaning that CLASS takes up 100% of the viewing area
+Then the 100% is divided by 12.  
+    So column 3 is at 25%, 6 is at 50%, 9 is at 75% .... just even divisions of the screen */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* ^^ Since these columns are %-age based, it will make it very adaptable to mobile viewing  _ to make it very responsive, go to [class*="col-"] and put a line in for "float: left"
+^^ this makes sure the columns are stacking from LEFT to RIGHT.  It makes it where they are 100% aligning properly
+
+
+we need a box sizing property to assist with the rows 
+What this does:
+    Some elements will have padding and margins,
+    this can cause the element to look larger than it is
+    The box sizing property grabs every single element, and it alters the padding/margin, adding it to the total size of that element.
+    - it helps keep all the content set to a realistic dimension which fits nicely in the columns*/
+* {
+    box-sizing: border-box;
+}
+
+/* 
+This next class just gives a visual representation while working with columns 
+class* means ALL CLASSES
+"col-" means 'that start with "col-" '
+if this criteria is met, then do what is in the {}
+*/
+[class*="col-"]{
+    border: 2px solid red;
+    padding: 15px;
+    float: left
+}

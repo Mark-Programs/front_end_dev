@@ -1,0 +1,15 @@
+Rules of web design:
+    1. Start off building for desktop
+    2. As one element is finished, then tweak it right then and there for Mobile use.
+    3. Then work on the next element of the site
+
+    This makes sure you don't overlook anything, preventing you from having to come back later and jump into code that you messed with days, if not weeks ago.
+    ---It prevents it from getting so messy and doing overlaps, etc.  It helps you tackle it as needed and keeps everything organized.
+- This makes sure each item collapses correctly, making your workflow much easier.
+
+CLASS vs ID:
+    If any style properties are to be added, use a CLASS
+    Do not apply style properties to IDs, it is a bad practice.
+    ####### IDs main use is to interact with JavaScript, nothing more ######
+
+Any time JavaScript is used, reference an external file.  In this webpage, however, we will use in-line code for easy reading.
