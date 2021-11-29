@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!--GOAL - create a form with multiple user input fields-->
+
+<body>
+
+    <h1>Computer Order Form</h1>
+
+    <section id="mainbox">
+
+        <form action="submission" method="post">
+            <h2>Configure Your Laptop</h2>
+            <section class="case">
+
+
+            </section>
+            <section class="processor">
+                <span class="LABELS">Processor Type</span>
+                <br>
+                <input type="radio" name="processor" id="i7-11390H" value="yes">
+                <label for="i7-11390H">Intel Core i7-11390H</label>
+                <input type="radio" name="processor" id="i5-11320H" value="yes">
+                <label for="i7-11320H">Intel Core i7-11320H</label>
+            </section>
+            <hr>
+            <section class="operatingsys">
+                <span class="LABELS">Operating System</span>
+                <br>
+                <input type="radio" name="operatingsys" id="win11" value="yes"><label for="win11">Windows 11</label>
+                <input type="radio" name="operatingsys" id="win10" value="yes">
+                <label for="win10">Windows 10</label>
+            </section>
+            <hr>
+            <section class="memory">
+                <span class="LABELS">RAM Capacity</span>
+                <br>
+                <input type="radio" name="memory" id="2x4gbDDR4" value="yes">
+                <label for="2x4gbDDR4">8GB, 2x4GB, DDR4, 3200MHz</label>
+                <input type="radio" name="memory" id="2x8gbDDR4" value="yes">
+                <label for="2x8gbDDR4">16GB, 2x8GB, DDR4, 3200MHz</label>
+            </section>
+            <hr>
+            <section class="caseColor">
+                <span class="LABELS">Case color</span>
+                <br>
+                <input type="radio" name="caseColor" id="blackCase" value="yes">
+                <label for="blackCase">Annodized Brushed Black Aluminum</label>
+                <input type="radio" name="caseColor" id="greyCase" value="yes">
+                <label for="greyCase">Brushed Aluminum</label>
+            </section>
+            <hr>
+            <section class="HDD">
+                <label for="HDD" class="LABELS">HDD Style</label>
+                <br>
+                <select name="HDD" id="HDD">
+                    <option value="256ssd">256GB M.2 PCIe NVMe Solid State Drive</option>
+                    <option value="512ssd">256GB M.2 PCIe NVMe Solid State Drive</option>
+                    <option value="1Tssd">256GB M.2 PCIe NVMe Solid State Drive</option>
+                </select>
+            </section>
+
+
+
+
+        </form>
+
+
+
+
+    </section>
+
+
+
+
+
+</body>
+
+</html>
